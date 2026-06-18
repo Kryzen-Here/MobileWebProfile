@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#050505">
+    <title>KRYZEN.EXE | Digital Realm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Desktop Warning -->
+    <div id="desktop-warning">
+        <div class="warning-content">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-glitch" data-text="ACCESS DENIED">ACCESS DENIED</div>
+            <p class="warning-text">This realm was built for mobile devices.</p>
+            <p class="warning-sub">Open on a phone for the complete experience.</p>
+            <div class="warning-signature">-KRYZEN</div>
+            <div class="warning-particles"></div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-circuit-particles">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </div>
+            <div class="loader-title" data-text="KRYZEN.EXE">KRYZEN.EXE</div>
+            <div class="loader-subtitle">Initializing Digital Realm...</div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+                <div class="loader-bar-glow"></div>
+            </div>
+            <div class="loader-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Digital Clock -->
+    <div id="digital-clock">
+        <span id="clock-time">00:00:00</span>
+    </div>
+
+    <!-- Ambient Sound Button -->
+    <button id="ambient-btn" aria-label="Toggle ambient sound">♫</button>
+
+    <!-- Floating Profile Core -->
+    <div id="floating-core" class="hidden">
+        <img src="assets/profile.jpg" alt="KRYZEN" id="floating-core-img">
+        <div class="core-ring"></div>
+    </div>
+
+    <!-- Main Scroll Container -->
+    <main id="scroll-container">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="snap-section">
+            <div class="hero-bg-effects">
+                <div class="hero-grid"></div>
+            </div>
+            <div class="hero-content">
+                <div class="profile-container" id="profile-container">
+                    <div class="profile-ring ring-1"></div>
+                    <div class="profile-ring ring-2"></div>
+                    <div class="profile-ring ring-3"></div>
+                    <div class="profile-aura"></div>
+                    <div class="profile-lightning l1"></div>
+                    <div class="profile-lightning l2"></div>
+                    <div class="profile-lightning l3"></div>
+                    <div class="profile-lightning l4"></div>
+                    <div class="circuit-fragment cf1">⟨/⟩</div>
+                    <div class="circuit-fragment cf2">01</div>
+                    <div class="circuit-fragment cf3">{ }</div>
+                    <div class="circuit-fragment cf4">⚡</div>
+                    <div class="circuit-fragment cf5">△</div>
+                    <div class="circuit-fragment cf6">◇</div>
+                    <div class="digital-symbol ds1">0x</div>
+                    <div class="digital-symbol ds2">#!</div>
+                    <div class="digital-symbol ds3">&&</div>
+                    <div class="profile-img-wrapper" id="profile-tap-target">
+                        <img src="assets/profile.jpg" alt="KRYZEN" class="profile-img" id="hero-profile-img">
+                        <div class="profile-scanline"></div>
+                    </div>
+                    <div class="profile-particles">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span>
+                    </div>
+                </div>
+
+                <div class="hero-kanji">神</div>
+                <h1 class="hero-name" data-text="KRYZEN">KRYZEN</h1>
+                <div class="hero-title-container">
+                    <span class="hero-title" id="hero-title">Embedded Architect</span>
+                    <span class="title-cursor">|</span>
+                </div>
+                <p class="hero-desc">Building worlds through code, hardware and creativity.</p>
+                <button class="enter-btn" id="enter-btn">
+                    <span class="enter-btn-text">ENTER</span>
+                    <span class="enter-btn-icon">⟩</span>
+                    <div class="enter-btn-glow"></div>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 1: WHO IS KRYZEN -->
+        <section id="about" class="snap-section">
+            <div class="section-header">
+                <span class="section-tag">// SYSTEM.INFO</span>
+                <h2 class="section-title">WHO IS KRYZEN?</h2>
+            </div>
+            <div class="terminal-card" id="terminal-card">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">kryzen@realm:~</span>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line" data-delay="0">
+                        <span class="terminal-prompt">&gt;</span>
+                        <span class="terminal-key">Username</span>
+                        <span class="terminal-sep">:</span>
+                        <span class="terminal-value">Kryzen</span>
+                    </div>
+                    <div class="terminal-line" data-delay="200">
+                        <span class="terminal-prompt">&gt;</span>
+                        <span class="terminal-key">Status</span>
+                        <span class="terminal-sep">:</span>
+                        <span class="terminal-value status-online">Online <span class="online-dot"></span></span>
+                    </div>
+                    <div class="terminal-line" data-delay="400">
+                        <span class="terminal-prompt">&gt;</span>
+                        <span class="terminal-key">Occupation</span>
+                        <span class="terminal-sep">:</span>
+                        <span class="terminal-value">Student Developer</span>
+                    </div>
+                    <div class="terminal-line" data-delay="600">
+                        <span class="terminal-prompt">&gt;</span>
+                        <span class="terminal-key">Specialty</span>
+                        <span class="terminal-sep">:</span>
+                        <span class="terminal-value">Building Cool Stuff</span>
+                    </div>
+                    <div class="terminal-line" data-delay="800">
+                        <span class="terminal-prompt">&gt;</span>
+                        <span class="terminal-key">Mission</span>
+                        <span class="terminal-sep">:</span>
+                        <span class="terminal-value">Blend Hardware + AI</span>
+                    </div>
+                    <div class="terminal-cursor-line">
+                        <span class="terminal-prompt">&gt;</span>
+                        <span class="typing-cursor">█</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CORE POWERS -->
+        <section id="skills" class="snap-section">
+            <div class="section-header">
+                <span class="section-tag">// CORE.POWERS</span>
+                <h2 class="section-title">ABILITIES</h2>
+            </div>
+            <div class="hex-grid" id="hex-grid">
+                <div class="hex-card" data-skill="HTML">
+                    <div class="hex-shape">
+                        <div class="hex-inner">
+                            <span class="hex-icon">⚡</span>
+                            <span class="hex-label">HTML</span>
+                        </div>
+                        <div class="hex-glow"></div>
+                    </div>
+                </div>
+                <div class="hex-card" data-skill="CSS">
+                    <div class="hex-shape">
+                        <div class="hex-inner">
+                            <span class="hex-icon">⚡</span>
+                            <span class="hex-label">CSS</span>
+                        </div>
+                        <div class="hex-glow"></div>
+                    </div>
+                </div>
+                <div class="hex-card" data-skill="JavaScript">
+                    <div class="hex-shape">
+                        <div class="hex-inner">
+                            <span class="hex-icon">⚡</span>
+                            <span class="hex-label">JavaScript</span>
+                        </div>
+                        <div class="hex-glow"></div>
+                    </div>
+                </div>
+                <div class="hex-card" data-skill="ESP32">
+                    <div class="hex-shape">
+                        <div class="hex-inner">
+                            <span class="hex-icon">⚡</span>
+                            <span class="hex-label">ESP32</span>
+                        </div>
+                        <div class="hex-glow"></div>
+                    </div>
+                </div>
+                <div class="hex-card" data-skill="Raspberry Pi">
+                    <div class="hex-shape">
+                        <div class="hex-inner">
+                            <span class="hex-icon">⚡</span>
+                            <span class="hex-label">Raspberry Pi</span>
+                        </div>
+                        <div class="hex-glow"></div>
+                    </div>
+                </div>
+                <div class="hex-card" data-skill="AI APIs">
+                    <div class="hex-shape">
+                        <div class="hex-inner">
+                            <span class="hex-icon">⚡</span>
+                            <span class="hex-label">AI APIs</span>
+                        </div>
+                        <div class="hex-glow"></div>
+                    </div>
+                </div>
+                <div class="hex-card" data-skill="Embedded">
+                    <div class="hex-shape">
+                        <div class="hex-inner">
+                            <span class="hex-icon">⚡</span>
+                            <span class="hex-label">Embedded</span>
+                        </div>
+                        <div class="hex-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: THE ARSENAL -->
+        <section id="arsenal" class="snap-section">
+            <div class="section-header">
+                <span class="section-tag">// INVENTORY.DAT</span>
+                <h2 class="section-title">THE ARSENAL</h2>
+            </div>
+            <div class="arsenal-grid">
+                <div class="arsenal-card" data-tilt>
+                    <div class="arsenal-hologram"></div>
+                    <div class="arsenal-icon">🧠</div>
+                    <div class="arsenal-name">HTML</div>
+                    <div class="arsenal-type">Structure Core</div>
+                    <div class="arsenal-border"></div>
+                </div>
+                <div class="arsenal-card" data-tilt>
+                    <div class="arsenal-hologram"></div>
+                    <div class="arsenal-icon">🎨</div>
+                    <div class="arsenal-name">CSS</div>
+                    <div class="arsenal-type">Style Engine</div>
+                    <div class="arsenal-border"></div>
+                </div>
+                <div class="arsenal-card" data-tilt>
+                    <div class="arsenal-hologram"></div>
+                    <div class="arsenal-icon">⚙️</div>
+                    <div class="arsenal-name">JavaScript</div>
+                    <div class="arsenal-type">Logic Weaver</div>
+                    <div class="arsenal-border"></div>
+                </div>
+                <div class="arsenal-card" data-tilt>
+                    <div class="arsenal-hologram"></div>
+                    <div class="arsenal-icon">🔌</div>
+                    <div class="arsenal-name">ESP32</div>
+                    <div class="arsenal-type">Hardware Link</div>
+                    <div class="arsenal-border"></div>
+                </div>
+                <div class="arsenal-card" data-tilt>
+                    <div class="arsenal-hologram"></div>
+                    <div class="arsenal-icon">🍓</div>
+                    <div class="arsenal-name">Raspberry Pi</div>
+                    <div class="arsenal-type">Micro Server</div>
+                    <div class="arsenal-border"></div>
+                </div>
+                <div class="arsenal-card" data-tilt>
+                    <div class="arsenal-hologram"></div>
+                    <div class="arsenal-icon">🤖</div>
+                    <div class="arsenal-name">AI</div>
+                    <div class="arsenal-type">Neural Forge</div>
+                    <div class="arsenal-border"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: PROJECT REALM -->
+        <section id="projects" class="snap-section">
+            <div class="section-header">
+                <span class="section-tag">// PROJECT.REALM</span>
+                <h2 class="section-title">CREATIONS</h2>
+            </div>
+            <div class="timeline" id="project-timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item" data-project>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="project-icon">🧠</div>
+                        <h3>AI Experiments</h3>
+                        <p>Neural networks and intelligent systems exploring the boundaries of machine cognition.</p>
+                        <div class="project-particles"></div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-project>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="project-icon">🎙️</div>
+                        <h3>Voice Assistant</h3>
+                        <p>Custom voice-controlled AI assistant built from scratch with hardware integration.</p>
+                        <div class="project-particles"></div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-project>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="project-icon">🌐</div>
+                        <h3>Web Projects</h3>
+                        <p>Immersive digital experiences crafted with modern web technologies.</p>
+                        <div class="project-particles"></div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-project>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="project-icon">🔌</div>
+                        <h3>Embedded Projects</h3>
+                        <p>Hardware meets software. ESP32 and Raspberry Pi creations that bridge digital and physical.</p>
+                        <div class="project-particles"></div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-project>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="project-icon">💡</div>
+                        <h3>Creative Ideas</h3>
+                        <p>Experimental concepts pushing the limits of what's possible with code and imagination.</p>
+                        <div class="project-particles"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: DIGITAL SHRINE -->
+        <section id="shrine" class="snap-section">
+            <div class="shrine-bg">
+                <div class="binary-rain" id="binary-rain"></div>
+                <div class="circuit-pattern"></div>
+            </div>
+            <div class="shrine-content">
+                <div class="shrine-quote-mark">"</div>
+                <blockquote class="shrine-quote">
+                    I build experiences,<br>not just websites.
+                </blockquote>
+                <div class="shrine-quote-mark bottom">"</div>
+                <div class="shrine-author">— KRYZEN</div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="snap-section">
+            <div class="section-header">
+                <span class="section-tag">// CONNECT.SYS</span>
+                <h2 class="section-title">REACH ME</h2>
+            </div>
+            <div class="contact-grid">
+                <a href="https://github.com/kryzen" target="_blank" rel="noopener" class="contact-btn" data-contact="github">
+                    <div class="contact-glow"></div>
+                    <div class="contact-icon-wrap">
+                        <svg class="contact-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </div>
+                    <span class="contact-label">Github</span>
+                </a>
+                <a href="https://instagram.com/kryzen" target="_blank" rel="noopener" class="contact-btn" data-contact="instagram">
+                    <div class="contact-glow"></div>
+                    <div class="contact-icon-wrap">
+                        <svg class="contact-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </div>
+                    <span class="contact-label">Instagram</span>
+                </a>
+                <a href="mailto:kryzen@email.com" class="contact-btn" data-contact="email">
+                    <div class="contact-glow"></div>
+                    <div class="contact-icon-wrap">
+                        <svg class="contact-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <span class="contact-label">Email</span>
+                </a>
+            </div>
+            <div class="footer-text">
+                <span class="footer-line">KRYZEN.EXE v1.0</span>
+                <span class="footer-sub">Built with raw code & dark energy</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav id="bottom-nav">
+        <div class="nav-glass">
+            <button class="nav-btn active" data-target="hero" aria-label="Home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-pulse"></span>
+            </button>
+            <button class="nav-btn" data-target="skills" aria-label="Skills">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-pulse"></span>
+            </button>
+            <button class="nav-btn" data-target="projects" aria-label="Projects">
+                <span class="nav-icon">🚀</span>
+                <span class="nav-pulse"></span>
+            </button>
+            <button class="nav-btn" data-target="contact" aria-label="Contact">
+                <span class="nav-icon">👤</span>
+                <span class="nav-pulse"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Kryzen Mode Overlay -->
+    <div id="kryzen-mode" class="hidden">
+        <div class="kryzen-mode-text">⚡ KRYZEN MODE ACTIVATED ⚡</div>
+    </div>
+
+    <!-- Touch Ripple Container -->
+    <div id="ripple-container"></div>
+
+    <script src="js/particles.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
