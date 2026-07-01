@@ -173,7 +173,7 @@ assets/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/kryzen-portfolio.git
+git clone https://github.com/Kryzen-Here/kryzen-portfolio.git
 
 cd kryzen-portfolio
 ```
